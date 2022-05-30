@@ -34,7 +34,7 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:24](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L24)
+[block.ts:24](https://github.com/gorillatron/subculture/blob/a23c227/src/block.ts#L24)
 
 ___
 
@@ -58,7 +58,7 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:13](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L13)
+[block.ts:13](https://github.com/gorillatron/subculture/blob/a23c227/src/block.ts#L13)
 
 ___
 
@@ -82,7 +82,7 @@ number
 
 #### Defined in
 
-[block.ts:40](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L40)
+[block.ts:40](https://github.com/gorillatron/subculture/blob/a23c227/src/block.ts#L40)
 
 ___
 
@@ -112,4 +112,4 @@ function - unsubscribe
 
 #### Defined in
 
-[block.ts:58](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L58)
+[block.ts:58](https://github.com/gorillatron/subculture/blob/a23c227/src/block.ts#L58)

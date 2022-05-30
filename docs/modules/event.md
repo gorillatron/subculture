@@ -33,4 +33,4 @@ GenericExtrinsic<AnyTuple>[]
 
 #### Defined in
 
-[event.ts:15](https://github.com/gorillatron/subculture/blob/dd93ae4/src/event.ts#L15)
+[event.ts:15](https://github.com/gorillatron/subculture/blob/a23c227/src/event.ts#L15)

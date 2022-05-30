@@ -33,7 +33,7 @@ boolean
 
 #### Defined in
 
-[address.ts:14](https://github.com/gorillatron/subculture/blob/dd93ae4/src/address.ts#L14)
+[address.ts:14](https://github.com/gorillatron/subculture/blob/a23c227/src/address.ts#L14)
 
 ___
 
@@ -57,7 +57,7 @@ string
 
 #### Defined in
 
-[address.ts:58](https://github.com/gorillatron/subculture/blob/dd93ae4/src/address.ts#L58)
+[address.ts:58](https://github.com/gorillatron/subculture/blob/a23c227/src/address.ts#L58)
 
 ___
 
@@ -84,4 +84,4 @@ string
 
 #### Defined in
 
-[address.ts:38](https://github.com/gorillatron/subculture/blob/dd93ae4/src/address.ts#L38)
+[address.ts:38](https://github.com/gorillatron/subculture/blob/a23c227/src/address.ts#L38)
