@@ -12,6 +12,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "noEmit": true,
-    "isolatedModules": false
+    "isolatedModules": false,
+    "skipLibCheck": true
   }
 }
