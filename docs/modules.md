@@ -4,15 +4,16 @@
 
 ## Table of contents
 
+### Namespaces
+
+- [address](modules/address.md)
+
 ### Functions
 
 - [blockAt](modules.md#blockat)
 - [blockNumberOf](modules.md#blocknumberof)
 - [extrinsicsAtEvent](modules.md#extrinsicsatevent)
-- [isValid](modules.md#isvalid)
-- [lastFour](modules.md#lastfour)
 - [latestBlock](modules.md#latestblock)
-- [shorten](modules.md#shorten)
 - [tail](modules.md#tail)
 
 ## Functions
@@ -38,7 +39,7 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:24](https://github.com/gorillatron/subculture/blob/9daac40/src/block.ts#L24)
+[block.ts:24](https://github.com/gorillatron/subculture/blob/94be615/src/block.ts#L24)
 
 ___
 
@@ -62,7 +63,7 @@ number
 
 #### Defined in
 
-[block.ts:43](https://github.com/gorillatron/subculture/blob/9daac40/src/block.ts#L43)
+[block.ts:43](https://github.com/gorillatron/subculture/blob/94be615/src/block.ts#L43)
 
 ___
 
@@ -87,56 +88,7 @@ Get the extrinsics in a block mapped by EventRecord.
 
 #### Defined in
 
-[event.ts:14](https://github.com/gorillatron/subculture/blob/9daac40/src/event.ts#L14)
-
-___
-
-### isValid
-
-▸ **isValid**(`address`, `ss58Format?`): `boolean`
-
-Validate a substrate address
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `address` | `AddressOrPair` | AddressOrPair |
-| `ss58Format?` | `number` | number |
-
-#### Returns
-
-`boolean`
-
-boolean
-
-#### Defined in
-
-[account.ts:14](https://github.com/gorillatron/subculture/blob/9daac40/src/account.ts#L14)
-
-___
-
-### lastFour
-
-▸ **lastFour**(`address`): `string`
-
-Last four characters of an address
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `address` | `AddressOrPair` | AddressOrPair |
-
-#### Returns
-
-`string`
-
-string
-
-#### Defined in
-
-[account.ts:58](https://github.com/gorillatron/subculture/blob/9daac40/src/account.ts#L58)
+[event.ts:14](https://github.com/gorillatron/subculture/blob/94be615/src/event.ts#L14)
 
 ___
 
@@ -160,34 +112,7 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:13](https://github.com/gorillatron/subculture/blob/9daac40/src/block.ts#L13)
-
-___
-
-### shorten
-
-▸ **shorten**(`address`, `sliceStart?`, `sliceEnd?`, `seperator`): `string`
-
-Shorten an address. Usefull in small UI lists etc.
-
-#### Parameters
-
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `address` | `AddressOrPair` | `undefined` | AddressOrPair |
-| `sliceStart` | `number` | `6` | number |
-| `sliceEnd` | `number` | `4` | number |
-| `seperator` | ``"..."`` | `undefined` | string |
-
-#### Returns
-
-`string`
-
-string
-
-#### Defined in
-
-[account.ts:38](https://github.com/gorillatron/subculture/blob/9daac40/src/account.ts#L38)
+[block.ts:13](https://github.com/gorillatron/subculture/blob/94be615/src/block.ts#L13)
 
 ___
 
@@ -217,4 +142,4 @@ function - unsubscribe
 
 #### Defined in
 
-[block.ts:61](https://github.com/gorillatron/subculture/blob/9daac40/src/block.ts#L61)
+[block.ts:61](https://github.com/gorillatron/subculture/blob/94be615/src/block.ts#L61)
