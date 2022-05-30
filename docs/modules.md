@@ -1,17 +1,19 @@
+[subculture](README.md) / Exports
+
 # subculture
 
 ## Table of contents
 
 ### Functions
 
-- [blockAt](../wiki/Exports#blockat)
-- [blockNumberOf](../wiki/Exports#blocknumberof)
-- [extrinsicsAtEvent](../wiki/Exports#extrinsicsatevent)
-- [isValid](../wiki/Exports#isvalid)
-- [lastFour](../wiki/Exports#lastfour)
-- [latestBlock](../wiki/Exports#latestblock)
-- [shorten](../wiki/Exports#shorten)
-- [tail](../wiki/Exports#tail)
+- [blockAt](modules.md#blockat)
+- [blockNumberOf](modules.md#blocknumberof)
+- [extrinsicsAtEvent](modules.md#extrinsicsatevent)
+- [isValid](modules.md#isvalid)
+- [lastFour](modules.md#lastfour)
+- [latestBlock](modules.md#latestblock)
+- [shorten](modules.md#shorten)
+- [tail](modules.md#tail)
 
 ## Functions
 
@@ -36,7 +38,7 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:24](https://github.com/gorillatron/subculture/blob/2117f87/src/block.ts#L24)
+[block.ts:24](https://github.com/gorillatron/subculture/blob/da2cd09/src/block.ts#L24)
 
 ___
 
@@ -60,7 +62,7 @@ number
 
 #### Defined in
 
-[block.ts:43](https://github.com/gorillatron/subculture/blob/2117f87/src/block.ts#L43)
+[block.ts:43](https://github.com/gorillatron/subculture/blob/da2cd09/src/block.ts#L43)
 
 ___
 
@@ -85,7 +87,7 @@ Get the extrinsics in a block mapped by EventRecord.
 
 #### Defined in
 
-[event.ts:14](https://github.com/gorillatron/subculture/blob/2117f87/src/event.ts#L14)
+[event.ts:14](https://github.com/gorillatron/subculture/blob/da2cd09/src/event.ts#L14)
 
 ___
 
@@ -110,7 +112,7 @@ boolean
 
 #### Defined in
 
-[account.ts:14](https://github.com/gorillatron/subculture/blob/2117f87/src/account.ts#L14)
+[account.ts:14](https://github.com/gorillatron/subculture/blob/da2cd09/src/account.ts#L14)
 
 ___
 
@@ -134,7 +136,7 @@ string
 
 #### Defined in
 
-[account.ts:58](https://github.com/gorillatron/subculture/blob/2117f87/src/account.ts#L58)
+[account.ts:58](https://github.com/gorillatron/subculture/blob/da2cd09/src/account.ts#L58)
 
 ___
 
@@ -158,7 +160,7 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:13](https://github.com/gorillatron/subculture/blob/2117f87/src/block.ts#L13)
+[block.ts:13](https://github.com/gorillatron/subculture/blob/da2cd09/src/block.ts#L13)
 
 ___
 
@@ -185,7 +187,7 @@ string
 
 #### Defined in
 
-[account.ts:38](https://github.com/gorillatron/subculture/blob/2117f87/src/account.ts#L38)
+[account.ts:38](https://github.com/gorillatron/subculture/blob/da2cd09/src/account.ts#L38)
 
 ___
 
@@ -215,4 +217,4 @@ function? - unsubscribe
 
 #### Defined in
 
-[block.ts:61](https://github.com/gorillatron/subculture/blob/2117f87/src/block.ts#L61)
+[block.ts:61](https://github.com/gorillatron/subculture/blob/da2cd09/src/block.ts#L61)
