@@ -55,7 +55,7 @@ export const blockNumberOf = (block: SignedBlock) => {
  * @param api ApiPromise
  * @param nr number - block number to tail from
  * @param cb function - callback to invoke on new block
- * @returns function? - unsubscribe
+ * @returns function - unsubscribe
  */
 
 export const tail = async (
