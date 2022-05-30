@@ -7,13 +7,16 @@ import { hexToU8a, isHex } from "@polkadot/util";
  * Validate a substrate address
  *
  * @param address AddressOrPair
+ * @param ss58Format number
  * @returns boolean
  */
 
-export const isValid = (address: AddressOrPair) => {
+export const isValid = (address: AddressOrPair, ss58Format?: number) => {
   try {
     encodeAddress(
-      isHex(address) ? hexToU8a(address) : decodeAddress(address.toString())
+      isHex(address)
+        ? hexToU8a(address)
+        : decodeAddress(address.toString(), undefined, ss58Format)
     );
     return true;
   } catch (error) {
