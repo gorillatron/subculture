@@ -24,14 +24,11 @@ export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock()
 export const blockAt = async (
   api: ApiPromise,
   nr: number,
-): Promise<[SignedBlock | null, boolean]> => {
+): Promise<SignedBlock | null> => {
   try {
-    const block = await api.rpc.chain
-      .getBlockHash(nr)
-      .then(hash => api.rpc.chain.getBlock(hash))
-    return [block, false]
+    return await api.rpc.chain.getBlockHash(nr).then(hash => api.rpc.chain.getBlock(hash))
   } catch (error) {
-    return [null, true]
+    return null
   }
 }
 
@@ -49,7 +46,11 @@ export const blockNumberOf = (block: SignedBlock) => {
 
 /**
  *
- * Tails the chain for new blocks from a given blocknumber
+ * Tails the chain for new blocks from a given blocknumber.
+ * Awaits the callback for sequential processing.
+ *
+ * @nb If average callback processing time takes longer time than the average chain block time
+ * the tailing will start to lagg behind the chain block production.
  *
  * @param api ApiPromise
  * @param nr number - block number to tail from
@@ -62,9 +63,9 @@ export const tail = async (
   nr: number,
   cb: (block: SignedBlock) => Promise<void>,
 ): Promise<VoidFn | undefined> => {
-  const [block, last] = await blockAt(api, nr)
+  const block = await blockAt(api, nr)
 
-  if (last) {
+  if (!block) {
     return await api.rpc.chain.subscribeFinalizedHeads(header => {
       return api.rpc.chain.getBlock(header.hash).then(async block => {
         return await cb(block)
