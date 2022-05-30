@@ -1,0 +1,19 @@
+{
+  "name": "subculture",
+  "packageManager": "yarn@3.2.0",
+  "module": "true",
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c"
+  },
+  "dependencies": {
+    "@polkadot/api": "^8.6.2",
+    "@polkadot/types": "^8.6.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup": "^2.75.3",
+    "rollup-plugin-inject": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.31.2"
+  }
+}
