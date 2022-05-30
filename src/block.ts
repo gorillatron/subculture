@@ -62,7 +62,7 @@ export const tail = async (
   api: ApiPromise,
   nr: number,
   cb: (block: SignedBlock) => Promise<void>,
-): Promise<VoidFn | undefined> => {
+): Promise<VoidFn> => {
   const block = await blockAt(api, nr)
 
   if (!block) {
@@ -71,7 +71,7 @@ export const tail = async (
         return await cb(block)
       })
     })
-  } else if (block) {
+  } else {
     await cb(block)
     return tail(api, nr + 1, cb)
   }
