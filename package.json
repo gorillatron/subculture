@@ -1,8 +1,9 @@
 {
   "name": "subculture",
   "packageManager": "yarn@3.2.0",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c"
   },

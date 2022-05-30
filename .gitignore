@@ -1,5 +1,4 @@
-.yarn/*
-
-node_modules
-
 .DS_Store
+.yarn/*
+node_modules
+dist

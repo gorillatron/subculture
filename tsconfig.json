@@ -3,6 +3,7 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "declarationDir": "./dist",
+    "declaration": true,
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
