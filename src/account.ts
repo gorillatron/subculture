@@ -35,7 +35,7 @@ export const isValid = (address: AddressOrPair, ss58Format?: number) => {
  * @returns string
  */
 
-export const shortenAddress = (
+export const shorten = (
   address: AddressOrPair,
   sliceStart: number = 6,
   sliceEnd: number = 4,
