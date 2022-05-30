@@ -6,16 +6,16 @@
 
 ### Functions
 
-- [blockAt](block.md#blockat)
-- [blockNumberOf](block.md#blocknumberof)
-- [latestBlock](block.md#latestblock)
+- [at](block.md#at)
+- [latest](block.md#latest)
+- [numberOf](block.md#numberof)
 - [tail](block.md#tail)
 
 ## Functions
 
-### blockAt
+### at
 
-▸ **blockAt**(`api`, `nr`): `Promise`<``null`` \| `SignedBlock`\>
+▸ **at**(`api`, `nr`): `Promise`<``null`` \| `SignedBlock`\>
 
 Get the block at a certain blocknumber if it exists.
 
@@ -34,37 +34,13 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:24](https://github.com/gorillatron/subculture/blob/63afaa3/src/block.ts#L24)
+[block.ts:24](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L24)
 
 ___
 
-### blockNumberOf
+### latest
 
-▸ **blockNumberOf**(`block`): `number`
-
-Get the block number of a block.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `block` | `SignedBlock` | SignedBlock |
-
-#### Returns
-
-`number`
-
-number
-
-#### Defined in
-
-[block.ts:43](https://github.com/gorillatron/subculture/blob/63afaa3/src/block.ts#L43)
-
-___
-
-### latestBlock
-
-▸ **latestBlock**(`api`): `Promise`<`SignedBlock`\>
+▸ **latest**(`api`): `Promise`<`SignedBlock`\>
 
 Get the latest block
 
@@ -82,7 +58,31 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:13](https://github.com/gorillatron/subculture/blob/63afaa3/src/block.ts#L13)
+[block.ts:13](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L13)
+
+___
+
+### numberOf
+
+▸ **numberOf**(`block`): `number`
+
+Get the block number of a block.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `block` | `SignedBlock` | SignedBlock |
+
+#### Returns
+
+`number`
+
+number
+
+#### Defined in
+
+[block.ts:40](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L40)
 
 ___
 
@@ -112,4 +112,4 @@ function - unsubscribe
 
 #### Defined in
 
-[block.ts:61](https://github.com/gorillatron/subculture/blob/63afaa3/src/block.ts#L61)
+[block.ts:58](https://github.com/gorillatron/subculture/blob/dd93ae4/src/block.ts#L58)

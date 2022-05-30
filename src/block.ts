@@ -10,7 +10,7 @@ import { SignedBlock } from '@polkadot/types/interfaces'
  * @returns SignedBlock
  */
 
-export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock()
+export const latest = async (api: ApiPromise) => api.rpc.chain.getBlock()
 
 /**
  *
@@ -21,10 +21,7 @@ export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock()
  * @returns SignedBlock | null
  */
 
-export const blockAt = async (
-  api: ApiPromise,
-  nr: number,
-): Promise<SignedBlock | null> => {
+export const at = async (api: ApiPromise, nr: number): Promise<SignedBlock | null> => {
   try {
     return await api.rpc.chain.getBlockHash(nr).then(hash => api.rpc.chain.getBlock(hash))
   } catch (error) {
@@ -40,7 +37,7 @@ export const blockAt = async (
  * @returns number
  */
 
-export const blockNumberOf = (block: SignedBlock) => {
+export const numberOf = (block: SignedBlock) => {
   return parseInt(block.block.header.number.toString().replace(/,/g, ''))
 }
 
@@ -63,7 +60,7 @@ export const tail = async (
   nr: number,
   cb: (block: SignedBlock) => Promise<void>,
 ): Promise<VoidFn> => {
-  const block = await blockAt(api, nr)
+  const block = await at(api, nr)
 
   if (!block) {
     return await api.rpc.chain.subscribeFinalizedHeads(header => {

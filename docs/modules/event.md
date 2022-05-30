@@ -6,22 +6,22 @@
 
 ### Functions
 
-- [extrinsicsAtEvent](event.md#extrinsicsatevent)
+- [mapToExtrinsics](event.md#maptoextrinsics)
 
 ## Functions
 
-### extrinsicsAtEvent
+### mapToExtrinsics
 
-▸ **extrinsicsAtEvent**(`events`, `block`, `filter?`): `GenericExtrinsic`<`AnyTuple`\>[]
+▸ **mapToExtrinsics**(`block`, `events`, `filter?`): `GenericExtrinsic`<`AnyTuple`\>[]
 
-Get the extrinsics in a block mapped by EventRecord.
+Get the extrinsics in a block mapped by its events.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `events` | `Vec`<`EventRecord`\> | Vec<EventRecord> |
 | `block` | `SignedBlock` | SignedBlock |
+| `events` | `Vec`<`EventRecord`\> | Vec<EventRecord> |
 | `filter?` | `Object` | - |
 | `filter.method?` | `string` | string |
 
@@ -29,6 +29,8 @@ Get the extrinsics in a block mapped by EventRecord.
 
 `GenericExtrinsic`<`AnyTuple`\>[]
 
+GenericExtrinsic<AnyTuple>[]
+
 #### Defined in
 
-[event.ts:14](https://github.com/gorillatron/subculture/blob/63afaa3/src/event.ts#L14)
+[event.ts:15](https://github.com/gorillatron/subculture/blob/dd93ae4/src/event.ts#L15)
