@@ -1,3 +1,0 @@
-# subculture
-
-Some utilities.
