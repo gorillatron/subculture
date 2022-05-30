@@ -1,4 +1,5 @@
 # subculture
 
-**Docs:**
-- [Docs](./docs)
+Polkadot.js and Substrate development utilities.
+
+[Docs](./docs/modules.md)
