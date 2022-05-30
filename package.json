@@ -1,16 +1,21 @@
 {
   "name": "subculture",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1-alpha3",
   "packageManager": "yarn@3.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "build": "rm -rf ./dist && rollup -c"
   },
   "dependencies": {
     "@polkadot/api": "^8.6.2",
-    "@polkadot/types": "^8.6.2"
+    "@polkadot/keyring": "^9.3.1",
+    "@polkadot/types": "^8.6.2",
+    "@polkadot/util": "^9.3.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
