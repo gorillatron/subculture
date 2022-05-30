@@ -1,6 +1,6 @@
 {
   "name": "subculture",
-  "version": "0.0.1-alpha4",
+  "version": "0.0.1-alpha5",
   "packageManager": "yarn@3.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
