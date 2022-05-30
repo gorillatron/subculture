@@ -38,7 +38,7 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:24](https://github.com/gorillatron/subculture/blob/533dde8/src/block.ts#L24)
+[block.ts:24](https://github.com/gorillatron/subculture/blob/8e22401/src/block.ts#L24)
 
 ___
 
@@ -62,7 +62,7 @@ number
 
 #### Defined in
 
-[block.ts:43](https://github.com/gorillatron/subculture/blob/533dde8/src/block.ts#L43)
+[block.ts:43](https://github.com/gorillatron/subculture/blob/8e22401/src/block.ts#L43)
 
 ___
 
@@ -87,7 +87,7 @@ Get the extrinsics in a block mapped by EventRecord.
 
 #### Defined in
 
-[event.ts:14](https://github.com/gorillatron/subculture/blob/533dde8/src/event.ts#L14)
+[event.ts:14](https://github.com/gorillatron/subculture/blob/8e22401/src/event.ts#L14)
 
 ___
 
@@ -112,7 +112,7 @@ boolean
 
 #### Defined in
 
-[account.ts:14](https://github.com/gorillatron/subculture/blob/533dde8/src/account.ts#L14)
+[account.ts:14](https://github.com/gorillatron/subculture/blob/8e22401/src/account.ts#L14)
 
 ___
 
@@ -136,7 +136,7 @@ string
 
 #### Defined in
 
-[account.ts:58](https://github.com/gorillatron/subculture/blob/533dde8/src/account.ts#L58)
+[account.ts:58](https://github.com/gorillatron/subculture/blob/8e22401/src/account.ts#L58)
 
 ___
 
@@ -160,7 +160,7 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:13](https://github.com/gorillatron/subculture/blob/533dde8/src/block.ts#L13)
+[block.ts:13](https://github.com/gorillatron/subculture/blob/8e22401/src/block.ts#L13)
 
 ___
 
@@ -187,13 +187,13 @@ string
 
 #### Defined in
 
-[account.ts:38](https://github.com/gorillatron/subculture/blob/533dde8/src/account.ts#L38)
+[account.ts:38](https://github.com/gorillatron/subculture/blob/8e22401/src/account.ts#L38)
 
 ___
 
 ### tail
 
-▸ **tail**(`api`, `nr`, `cb`): `Promise`<`undefined` \| `VoidFn`\>
+▸ **tail**(`api`, `nr`, `cb`): `Promise`<`VoidFn`\>
 
 Tails the chain for new blocks from a given blocknumber.
 Awaits the callback for sequential processing.
@@ -211,10 +211,10 @@ the tailing will start to lagg behind the chain block production.
 
 #### Returns
 
-`Promise`<`undefined` \| `VoidFn`\>
+`Promise`<`VoidFn`\>
 
 function? - unsubscribe
 
 #### Defined in
 
-[block.ts:61](https://github.com/gorillatron/subculture/blob/533dde8/src/block.ts#L61)
+[block.ts:61](https://github.com/gorillatron/subculture/blob/8e22401/src/block.ts#L61)
