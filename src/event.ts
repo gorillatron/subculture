@@ -1,5 +1,5 @@
-import { Vec } from "@polkadot/types";
-import { EventRecord, SignedBlock } from "@polkadot/types/interfaces";
+import { Vec } from '@polkadot/types'
+import { EventRecord, SignedBlock } from '@polkadot/types/interfaces'
 
 /**
  *
@@ -15,17 +15,17 @@ export const extrinsicsAtEvent = (
   events: Vec<EventRecord>,
   block: SignedBlock,
   filter?: {
-    method?: string;
-  }
+    method?: string
+  },
 ) => {
   return block.block.extrinsics.filter((ex, index) =>
     Boolean(
       events.find(
-        (event) =>
+        event =>
           event.phase.isApplyExtrinsic &&
           event.phase.asApplyExtrinsic.eq(index) &&
-          (!filter?.method || ex.method.method.toString() === filter.method)
-      )
-    )
-  );
-};
+          (!filter?.method || ex.method.method.toString() === filter.method),
+      ),
+    ),
+  )
+}

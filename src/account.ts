@@ -1,6 +1,6 @@
-import { AddressOrPair } from "@polkadot/api/types";
-import { decodeAddress, encodeAddress } from "@polkadot/keyring";
-import { hexToU8a, isHex } from "@polkadot/util";
+import { AddressOrPair } from '@polkadot/api/types'
+import { decodeAddress, encodeAddress } from '@polkadot/keyring'
+import { hexToU8a, isHex } from '@polkadot/util'
 
 /**
  *
@@ -16,13 +16,13 @@ export const isValid = (address: AddressOrPair, ss58Format?: number) => {
     encodeAddress(
       isHex(address)
         ? hexToU8a(address)
-        : decodeAddress(address.toString(), undefined, ss58Format)
-    );
-    return true;
+        : decodeAddress(address.toString(), undefined, ss58Format),
+    )
+    return true
   } catch (error) {
-    return false;
+    return false
   }
-};
+}
 
 /**
  *
@@ -39,14 +39,13 @@ export const shortenAddress = (
   address: AddressOrPair,
   sliceStart: number = 6,
   sliceEnd: number = 4,
-  seperator: "..."
+  seperator: '...',
 ) => {
-  const addressString = address.toString();
-  return `${addressString.slice(
-    0,
-    sliceStart
-  )}${seperator}${addressString.slice(-sliceEnd)}`;
-};
+  const addressString = address.toString()
+  return `${addressString.slice(0, sliceStart)}${seperator}${addressString.slice(
+    -sliceEnd,
+  )}`
+}
 
 /**
  *
@@ -56,5 +55,4 @@ export const shortenAddress = (
  * @returns string
  */
 
-export const lastFour = (address: AddressOrPair) =>
-  address.toString().slice(-4);
+export const lastFour = (address: AddressOrPair) => address.toString().slice(-4)

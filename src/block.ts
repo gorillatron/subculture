@@ -1,6 +1,6 @@
-import { ApiPromise } from "@polkadot/api";
-import { VoidFn } from "@polkadot/api/types";
-import { SignedBlock } from "@polkadot/types/interfaces";
+import { ApiPromise } from '@polkadot/api'
+import { VoidFn } from '@polkadot/api/types'
+import { SignedBlock } from '@polkadot/types/interfaces'
 
 /**
  *
@@ -10,7 +10,7 @@ import { SignedBlock } from "@polkadot/types/interfaces";
  * @returns SignedBlock
  */
 
-export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock();
+export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock()
 
 /**
  *
@@ -23,17 +23,17 @@ export const latestBlock = async (api: ApiPromise) => api.rpc.chain.getBlock();
 
 export const blockAt = async (
   api: ApiPromise,
-  nr: number
+  nr: number,
 ): Promise<[SignedBlock | null, boolean]> => {
   try {
     const block = await api.rpc.chain
       .getBlockHash(nr)
-      .then((hash) => api.rpc.chain.getBlock(hash));
-    return [block, false];
+      .then(hash => api.rpc.chain.getBlock(hash))
+    return [block, false]
   } catch (error) {
-    return [null, true];
+    return [null, true]
   }
-};
+}
 
 /**
  *
@@ -44,8 +44,8 @@ export const blockAt = async (
  */
 
 export const blockNumberOf = (block: SignedBlock) => {
-  return parseInt(block.block.header.number.toString().replace(/,/g, ""));
-};
+  return parseInt(block.block.header.number.toString().replace(/,/g, ''))
+}
 
 /**
  *
@@ -60,18 +60,18 @@ export const blockNumberOf = (block: SignedBlock) => {
 export const tail = async (
   api: ApiPromise,
   nr: number,
-  cb: (block: SignedBlock) => Promise<void>
+  cb: (block: SignedBlock) => Promise<void>,
 ): Promise<VoidFn | undefined> => {
-  const [block, last] = await blockAt(api, nr);
+  const [block, last] = await blockAt(api, nr)
 
   if (last) {
-    return await api.rpc.chain.subscribeFinalizedHeads((header) => {
-      return api.rpc.chain.getBlock(header.hash).then(async (block) => {
-        return await cb(block);
-      });
-    });
+    return await api.rpc.chain.subscribeFinalizedHeads(header => {
+      return api.rpc.chain.getBlock(header.hash).then(async block => {
+        return await cb(block)
+      })
+    })
   } else if (block) {
-    await cb(block);
-    return tail(api, nr + 1, cb);
+    await cb(block)
+    return tail(api, nr + 1, cb)
   }
-};
+}
