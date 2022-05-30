@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && yarn run docs",
-    "docs": "typedoc src/index.ts && cp docs/modules.md ./readme.md && rm -rf docs"
+    "docs": "typedoc src/index.ts && cp docs/modules.md ./readme.md && cp docs/modules.md ./ && rm -rf docs"
   },
   "dependencies": {
     "@polkadot/api": "^8.6.2",
