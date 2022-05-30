@@ -1,3 +1,3 @@
-export * from './account'
-export * from './block'
-export * from './event'
+export * as address from './address'
+export * as block from './block'
+export * as event from './event'
