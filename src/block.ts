@@ -1,9 +1,6 @@
 import { ApiPromise } from '@polkadot/api'
-import { VoidFn } from '@polkadot/api/types'
 import { Vec } from '@polkadot/types'
 import { EventRecord, SignedBlock } from '@polkadot/types/interfaces'
-import limit from 'p-limit'
-import { range } from 'lodash'
 
 /**
  *
@@ -46,72 +43,15 @@ export const numberOf = (block: SignedBlock) => {
 
 /**
  *
- * Tails the chain for new blocks from a given blocknumber.
- * Awaits the callback for sequential processing.
+ * Get the block number in bigint of a block.
  *
- * @nb If average callback processing time takes longer time than the average chain block time
- * the tailing will start to lagg behind the chain block production.
- *
- * @param api ApiPromise
- * @param nr number - block number to tail from
- * @param cb function - callback to invoke on new block
- * @returns function - unsubscribe
+ * @param block SignedBlock
+ * @returns bigint
  */
 
-export const tail = async (
-  api: ApiPromise,
-  nr: number,
-  cb: (block: SignedBlock) => Promise<void>,
-): Promise<VoidFn> => {
-  const block = await at(api, nr)
-
-  if (!block) {
-    return await api.rpc.chain.subscribeFinalizedHeads(header => {
-      return api.rpc.chain.getBlock(header.hash).then(async block => {
-        return await cb(block)
-      })
-    })
-  } else {
-    await cb(block)
-    return tail(api, nr + 1, cb)
-  }
+export const bigintOf = (block: SignedBlock) => {
+  return BigInt(block.block.header.number.toString().replace(/,/g, ''))
 }
-
-/**
- *
- * Get a slice of blocks
- *
- * @param api ApiPromise
- * @param from number - start block
- * @param to number - end block
- * @returns Awaitable<SignedBlock[]>
- */
-export const slice = async (
-  api: ApiPromise,
-  from: number,
-  to: number,
-  concurrency = 8,
-): Promise<SignedBlock[]> => {
-  const pool = limit(concurrency)
-  return (
-    await Promise.all(
-      range(from, to).map(nr =>
-        pool(async () => {
-          const block = await at(api, nr)
-          if (block) {
-            return block
-          }
-        }),
-      ),
-    )
-  ).filter((block): block is SignedBlock => Boolean(block))
-}
-
-/**
- * Block and Events Tuple
- */
-
-export type BlockEventsPair = [SignedBlock, Vec<EventRecord>]
 
 /**
  *
@@ -122,12 +62,11 @@ export type BlockEventsPair = [SignedBlock, Vec<EventRecord>]
  * @returns BlockEventsPair
  */
 
-export const mapEventsToBlock = async (
+export const eventsAt = async (
   api: ApiPromise,
   block: SignedBlock,
-): Promise<BlockEventsPair> => {
-  const blockEvents = await (
+): Promise<Vec<EventRecord>> => {
+  return await (
     await api.at(block.block.header.hash.toHex())
   ).query.system.events<Vec<EventRecord>>()
-  return [block, blockEvents]
 }
