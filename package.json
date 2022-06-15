@@ -1,6 +1,6 @@
 {
   "name": "subculture",
-  "version": "0.0.1-alpha7",
+  "version": "0.0.1-alpha9",
   "packageManager": "yarn@3.2.0",
   "author": {
     "name": "Jørn Andre Tangen @gorillatron"
@@ -9,7 +9,14 @@
     "type": "git",
     "url": "https://github.com/gorillatron/subculture.git"
   },
-  "keywords": ["polkadot.js", "substrate", "web3", "polkadot", "crypto", "blockchain"],
+  "keywords": [
+    "polkadot.js",
+    "substrate",
+    "web3",
+    "polkadot",
+    "crypto",
+    "blockchain"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -24,11 +31,14 @@
     "@polkadot/api": "^8.6.2",
     "@polkadot/keyring": "^9.3.1",
     "@polkadot/types": "^8.6.2",
-    "@polkadot/util": "^9.3.1"
+    "@polkadot/util": "^9.3.1",
+    "lodash": "^4.17.21",
+    "p-limit": "^4.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-json": "^4.1.0",
+    "@types/lodash": "^4.14.182",
     "rollup": "^2.75.3",
     "rollup-plugin-inject": "^3.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
