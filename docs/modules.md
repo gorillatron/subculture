@@ -31,7 +31,7 @@ Block and Events Tuple
 
 #### Defined in
 
-[block.ts:114](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L114)
+[block.ts:114](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L114)
 
 ## Functions
 
@@ -56,7 +56,7 @@ SignedBlock | null
 
 #### Defined in
 
-[block.ts:27](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L27)
+[block.ts:27](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L27)
 
 ___
 
@@ -81,7 +81,7 @@ boolean
 
 #### Defined in
 
-[address.ts:14](https://github.com/gorillatron/subculture/blob/c95d576/src/address.ts#L14)
+[address.ts:14](https://github.com/yornaath/subculture/blob/d47c177/src/address.ts#L14)
 
 ___
 
@@ -105,7 +105,7 @@ string
 
 #### Defined in
 
-[address.ts:58](https://github.com/gorillatron/subculture/blob/c95d576/src/address.ts#L58)
+[address.ts:58](https://github.com/yornaath/subculture/blob/d47c177/src/address.ts#L58)
 
 ___
 
@@ -129,7 +129,7 @@ SignedBlock
 
 #### Defined in
 
-[block.ts:16](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L16)
+[block.ts:16](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L16)
 
 ___
 
@@ -154,7 +154,7 @@ BlockEventsPair
 
 #### Defined in
 
-[block.ts:125](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L125)
+[block.ts:125](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L125)
 
 ___
 
@@ -181,7 +181,7 @@ GenericExtrinsic<AnyTuple>[]
 
 #### Defined in
 
-[event.ts:15](https://github.com/gorillatron/subculture/blob/c95d576/src/event.ts#L15)
+[event.ts:15](https://github.com/yornaath/subculture/blob/d47c177/src/event.ts#L15)
 
 ___
 
@@ -205,7 +205,7 @@ number
 
 #### Defined in
 
-[block.ts:43](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L43)
+[block.ts:43](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L43)
 
 ___
 
@@ -232,7 +232,7 @@ string
 
 #### Defined in
 
-[address.ts:38](https://github.com/gorillatron/subculture/blob/c95d576/src/address.ts#L38)
+[address.ts:38](https://github.com/yornaath/subculture/blob/d47c177/src/address.ts#L38)
 
 ___
 
@@ -259,7 +259,7 @@ Awaitable<SignedBlock[]>
 
 #### Defined in
 
-[block.ts:89](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L89)
+[block.ts:89](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L89)
 
 ___
 
@@ -289,4 +289,4 @@ function - unsubscribe
 
 #### Defined in
 
-[block.ts:61](https://github.com/gorillatron/subculture/blob/c95d576/src/block.ts#L61)
+[block.ts:61](https://github.com/yornaath/subculture/blob/d47c177/src/block.ts#L61)
