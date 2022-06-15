@@ -43,18 +43,6 @@ export const numberOf = (block: SignedBlock) => {
 
 /**
  *
- * Get the block number in bigint of a block.
- *
- * @param block SignedBlock
- * @returns bigint
- */
-
-export const bigintOf = (block: SignedBlock) => {
-  return BigInt(block.block.header.number.toString().replace(/,/g, ''))
-}
-
-/**
- *
  * Fetch Events for a given block and return the pair.
  *
  * @param api ApiPromise
